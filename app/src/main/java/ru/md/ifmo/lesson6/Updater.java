@@ -114,7 +114,6 @@ public class Updater extends IntentService {
 
         @Override
         public void startDocument() {
-            Log.wtf("aaa", "1f1fjf");
             getContentResolver().delete(MyContentProvider.POST_CONTENT_URI, MyContentProvider.FEED_ID_FIELD + "=" + id, null);
          }
 

@@ -41,7 +41,7 @@ public class MyActivity extends Activity implements LoaderManager.LoaderCallback
             @Override
             public void onClick(View v) {
                 onUpdate();
-                updated();
+
             }
         });
 
@@ -78,7 +78,9 @@ public class MyActivity extends Activity implements LoaderManager.LoaderCallback
         Intent intent = new Intent(this, Updater.class);
         intent.putExtra("id", id);
         intent.putExtra("title", title);
+        updated();
         startService(intent);
+        updated();
 
     }
 

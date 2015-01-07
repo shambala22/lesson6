@@ -65,9 +65,9 @@ public class FeedActivity extends ListActivity implements LoaderManager.LoaderCa
                     intent.putExtra("title", title.getText().toString());
                     link.setText("");
                     title.setText("");
-                    onUpdate();
+                    updated();
                     startService(intent);
-                    onUpdate();
+                    updated();
 
                 } else {
                     Toast toast = Toast.makeText(getApplicationContext(), "Please, input title and link", Toast.LENGTH_SHORT);
@@ -96,7 +96,7 @@ public class FeedActivity extends ListActivity implements LoaderManager.LoaderCa
         setListAdapter(adapter);
     }
 
-    void onUpdate() {
+    void updated() {
         getLoaderManager().restartLoader(0, null, this);
     }
 
